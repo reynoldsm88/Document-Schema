@@ -9,3 +9,6 @@ This repository aims to establish a framework for managing documents collected a
 The `document-schema.json` file contains a [JSON Schema](http://json-schema.org/) for World Modeler documents prior them being processed by machine reading software. This schema file can be loaded to [the JSON Schema tool](https://jsonschema.net/) for for review through a graphical interface.
 
 This schema was collaboratively designed by World Modeler teams at the UAZ hackathon on 6/11/2019. The goal was to create a flexible schema that is extensible to a wide range of document types and use cases, but maintains key information about document provenance.
+
+## Schema Validation
+There are numerous schema validation libraries for a variety of programming languages, many of which can be found [here](http://json-schema.org/implementations.html). [`Schema-Validation.ipynb`](https://github.com/WorldModelers/Document-Schema/blob/master/Schema-Validation.ipynb) is a Jupyter Notebook demonstrating validation against this schema using the Python `jsonschema` library. 

@@ -15,3 +15,6 @@ There are numerous schema validation libraries for a variety of programming lang
 
 ## Document Processing
 Documents can be processed using the [`Document-Processor.ipynb`](https://github.com/WorldModelers/Document-Schema/blob/master/Document-Processor.ipynb) Jupyter Notebook. Ultimately, this processing step should be software, not a notebook, but since currently data curation is manual, not automated, this step requires an engineer-in-the loop to adjust the code to handle new documents. As such, this Notebook provides reference/stub code, not the ultimate document processing solution.
+
+## Document Retrieval
+Documents can be retrieved using the [`Document-Retrieval.ipynb`](https://github.com/WorldModelers/Document-Schema/blob/master/Document-Retrieval.ipynb) Jupyter Notebook. This provides an example of querying for or bulk downloading documents using Elasticsearch's Python API. Additionally, Elasticseach has clients in [several other programming languages](https://www.elastic.co/guide/en/elasticsearch/client/index.html).

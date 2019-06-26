@@ -18,3 +18,5 @@ Documents can be processed using the [`Document-Processor.ipynb`](https://github
 
 ## Document Retrieval
 Documents can be retrieved using the [`Document-Retrieval.ipynb`](https://github.com/WorldModelers/Document-Schema/blob/master/Document-Retrieval.ipynb) Jupyter Notebook. This provides an example of querying for or bulk downloading documents using Elasticsearch's Python API. Additionally, Elasticseach has clients in [several other programming languages](https://www.elastic.co/guide/en/elasticsearch/client/index.html).
+
+One thing to note about Elasticsearch is that the JSON document it returns contains top-level Elasticsearch specific metadata, while the actual `document` of interest must be accessed via the `_source` key. However the `_source` does not contain the document `_id`, which is contained at the top-level `_id`. Therefore, for a document to be compliant with [document-schema.json](https://github.com/WorldModelers/Document-Schema/blob/master/document-schema.json) we must extract `_source` and add the `_id` to it.

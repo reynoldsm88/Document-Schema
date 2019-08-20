@@ -1,4 +1,3 @@
-
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "CDR Document",
@@ -88,6 +87,9 @@
           },
           {
             "$ref": "#/definitions/dictionary-annotation"
+          },
+          {
+            "$ref": "#/definitions/tags-annotation"
           }
         ]
       }
@@ -99,6 +101,9 @@
       "type": "object",
       "properties": {
         "label": {
+          "type": "string"
+        },
+        "version" : {
           "type": "string"
         },
         "content": {
@@ -113,10 +118,45 @@
         "label": {
           "type": "string"
         },
+        "version" : {
+          "type": "string"
+        },
         "content": {
           "type": "object",
           "additionalProperties": {
             "type": "string"
+          }
+        }
+      }
+    },
+    "tags-annotation": {
+      "$id": "tags-annotation",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "version" : {
+          "type": "string"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "offset_start": {
+                "type": "integer"
+              },
+              "offset_stop": {
+                "type": "integer"
+              },
+              "text": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "string"
+              }
+            }
           }
         }
       }

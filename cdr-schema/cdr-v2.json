@@ -89,7 +89,7 @@
             "$ref": "#/definitions/dictionary-annotation"
           },
           {
-            "$ref": "#/definitions/tags-annotation"
+            "$ref": "#/definitions/offset-tag-annotation"
           }
         ]
       }
@@ -103,7 +103,7 @@
         "label": {
           "type": "string"
         },
-        "version" : {
+        "version": {
           "type": "string"
         },
         "content": {
@@ -118,7 +118,7 @@
         "label": {
           "type": "string"
         },
-        "version" : {
+        "version": {
           "type": "string"
         },
         "content": {
@@ -129,14 +129,14 @@
         }
       }
     },
-    "tags-annotation": {
-      "$id": "tags-annotation",
+    "offset-tag-annotation": {
+      "$id": "offset-tag-annotation",
       "type": "object",
       "properties": {
         "label": {
           "type": "string"
         },
-        "version" : {
+        "version": {
           "type": "string"
         },
         "content": {
@@ -147,16 +147,18 @@
               "offset_start": {
                 "type": "integer"
               },
-              "offset_stop": {
+              "offset_end": {
                 "type": "integer"
-              },
-              "text": {
-                "type": "string"
               },
               "tag": {
                 "type": "string"
               }
-            }
+            },
+            "required": [
+              "offset_start",
+              "offset_end",
+              "tag"
+            ]
           }
         }
       }

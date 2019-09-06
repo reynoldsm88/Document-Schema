@@ -17,7 +17,8 @@
     },
     "timestamp": {
       "description": "Timestamp from epoch when this CDR document was created",
-      "type": "integer"
+      "type": "string",
+      "pattern" : "[0-9]{4}-[0-9]{2}-[0-9]{2}"
     },
     "team": {
       "description": "Team which generated this CDR",
@@ -32,10 +33,12 @@
       "type": "object",
       "properties": {
         "CreationDate": {
-          "type": "integer"
+          "type": "string",
+          "pattern" : "[0-9]{4}-[0-9]{2}-[0-9]{2}"
         },
         "ModDate": {
-          "type": "integer"
+          "type": "string",
+          "pattern" : "[0-9]{4}-[0-9]{2}-[0-9]{2}"
         },
         "Author": {
           "type": "string"
@@ -57,10 +60,19 @@
         },
         "Language": {
           "type": "string"
+        },
+        "Pages": {
+          "type": "integer"
+        },
+        "Subject": {
+          "type": "string"
+        },
+        "Creator": {
+          "type": "string"
+        },
+        "Producer": {
+          "type": "string"
         }
-      },
-      "additionalProperties": {
-        "type": "string"
       }
     },
     "extracted_ntriples": {
@@ -93,6 +105,12 @@
           }
         ]
       }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "definitions": {
@@ -109,8 +127,8 @@
         "content": {
           "type": "string"
         },
-        "type":{
-          "type":"string"
+        "type": {
+          "type": "string"
         }
       }
     },
@@ -124,8 +142,8 @@
         "version": {
           "type": "string"
         },
-        "type":{
-          "type":"string"
+        "type": {
+          "type": "string"
         },
         "content": {
           "type": "object",
@@ -145,8 +163,8 @@
         "version": {
           "type": "string"
         },
-        "type":{
-          "type":"string"
+        "type": {
+          "type": "string"
         },
         "content": {
           "type": "array",

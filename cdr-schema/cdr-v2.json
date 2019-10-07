@@ -18,7 +18,7 @@
     "timestamp": {
       "description": "Timestamp from epoch when this CDR document was created",
       "type": "string",
-      "pattern" : "[0-9]{4}-[0-9]{2}-[0-9]{2}"
+      "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"
     },
     "team": {
       "description": "Team which generated this CDR",
@@ -34,11 +34,11 @@
       "properties": {
         "CreationDate": {
           "type": "string",
-          "pattern" : "[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"
         },
         "ModDate": {
           "type": "string",
-          "pattern" : "[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"
         },
         "Author": {
           "type": "string"
@@ -176,6 +176,9 @@
               },
               "offset_end": {
                 "type": "integer"
+              },
+              "value": {
+                "type": "string"
               },
               "tag": {
                 "type": "string"

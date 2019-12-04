@@ -113,7 +113,7 @@
   },
   "definitions": {
     "text-annotation": {
-      "description": "A simple annotation consisting of only a string. (Currently unused.)",
+      "description": "A simple annotation consisting of only a string.",
       "$id": "text-annotation",
       "type": "object",
       "properties": {
@@ -122,6 +122,13 @@
         },
         "version": {
           "type": "string"
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "static",
+            "derived"
+          ]
         },
         "content": {
           "type": "string"
@@ -152,7 +159,14 @@
           "type": "string",
           "enum": [
             "dictionary"
-          ]
+          ],
+          "class": {
+            "type": "string",
+            "enum": [
+              "static",
+              "derived"
+            ]
+          }
         },
         "content": {
           "type": "object",
@@ -180,7 +194,14 @@
           "type": "string",
           "enum": [
             "tags"
-          ]
+          ],
+          "class": {
+            "type": "string",
+            "enum": [
+              "static",
+              "derived"
+            ]
+          }
         },
         "content": {
           "type": "array",
@@ -231,6 +252,13 @@
           "type": "string",
           "enum": [
             "facets"
+          ]
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "static",
+            "derived"
           ]
         },
         "content": {

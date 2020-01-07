@@ -194,14 +194,14 @@
           "type": "string",
           "enum": [
             "tags"
-          ],
-          "class": {
-            "type": "string",
-            "enum": [
-              "static",
-              "derived"
-            ]
-          }
+          ]
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "static",
+            "derived"
+          ]
         },
         "content": {
           "type": "array",

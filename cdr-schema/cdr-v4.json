@@ -414,7 +414,6 @@
     "source_uri",
     "document_id",
     "timestamp",
-    "team",
     "content_type",
     "extracted_metadata",
     "extracted_ntriples"
